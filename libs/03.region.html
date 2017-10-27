@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>省市联动</title>
+    </head>
+    <body>
+    	<div id="pcd">
+    		<select name="" id="p">
+    			<option value="">请选择省</option>
+    		</select>
+    		<selec t name="" id="c">
+    			<option value="">请选择市</option>
+    		</select>
+    		<select name="" id="d">
+    			<option value="">请选择县</option>
+    		</select>
+    	</div>
+    	<script src="./jquery/dist/jquery.js"></script>
+    	<script src="./jquery-region/jquery.region.js"></script>
+    	<script>
+    		$('#pcd').region({
+    			url:'./region.json'
+    		})
+    	</script>
+    </body>
+</html>

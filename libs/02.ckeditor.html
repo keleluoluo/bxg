@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>ckeditor</title>
+    </head>
+    <body>
+    	<form action="">
+    		<textarea name="test" id="myeditor" cols="30" rows="10"></textarea>
+    		<input type="submit" value="cole">
+    	</form>
+    	<script src="ckeditor/ckeditor.js"></script>
+    	<script>
+    		CKEDITOR.replace('myeditor');
+    		CKEDITOR.instances.myeditor.getData();
+    	</script>
+    </body>
+</html>

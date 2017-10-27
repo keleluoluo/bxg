@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>上传文件</title>
+        <link rel="stylesheet" href="./uploadify/uploadify.css">
+        <style>
+        	.btn{
+        		background: lightcyan;
+        		border-radius: 50%;
+        		border: none;
+        	}
+        	
+        </style>
+    </head>
+    <body>
+    	<input type="file" id="upload">
+    	<img src="" alt="" id="img">
+    	<script src="./jquery/dist/jquery.js"></script>
+    	<script src="./uploadify/jquery.uploadify.js"></script>
+    	<script>
+    		$('#upload').uploadify({
+    			buttonClass:'btn',//指定一个样式
+    			buttonText:"上传图片",//更改按钮的文字
+    			fileTypeExts:'*.png;*.jpg',//显示上传文件的扩展名
+    			fileSizeLimit:'1000k',//限制上传的文件大小
+    			fileObjName:'avatar',//相当于input上的name
+    			swf:'uploadify/uploadify.swf',//flash
+    			uploader:'./01.upload.php',//上传地址
+    			onUploadSuccess:function(file,data){
+    				console.log(data);
+    				$('#img').attr('src',data);
+    			}
+    		})
+    	</script>
+    </body>
+</html>
